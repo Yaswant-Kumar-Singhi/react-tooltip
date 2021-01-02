@@ -5,19 +5,19 @@ import React from 'react';
 
 const TooltipMe = ({props}) => {return (<div>    
   {(props === 'top' &&
-      <div id="tooltiptop"> {props} ToolTip Successfully Selected..</div>   
+      <div style={{"margin" : "0"}}> {props} ToolTip Successfully Selected..</div>   
   )}
 
   {(props === 'right' &&
-     <div id="tooltipdown"> {props} ToolTip Successfully Selected..</div>      
+     <div style={{"paddingLeft":"5rem"  }}> {props} ToolTip Successfully Selected..</div>      
   )}
 
 {(props === 'bottom' &&
-     <div id="tooltipdown"> {props} ToolTip Successfully Selected..</div>      
+     <div style={{"paddingTop":"2rem"}}> {props} ToolTip Successfully Selected..</div>      
 )}
 
 {(props === 'left' &&
-     <div id="tooltipdown"> {props} ToolTip Successfully Selected..</div>      
+     <div style={{"margin":"0 0 0 -2rem"}}> {props} ToolTip Successfully Selected..</div>      
 )}
 
    </div>

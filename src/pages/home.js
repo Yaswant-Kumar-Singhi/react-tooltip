@@ -15,10 +15,22 @@ class Home extends Component {
         super();
         this.state = {
         box: 'text',
-        showTooltip: true,
+        showTooltip: false,
         tooltipPosition: '',
          }
     }
+    onHover = () => {
+        this.setState({
+          box: 'text',
+          showTooltip: true,
+        })
+      }
+      onLeave = () => {
+        this.setState({
+          box: 'text',
+          showTooltip: false,
+        })
+      }
 
     handleChange = (event) => {
         this.setState({
@@ -91,7 +103,7 @@ class Home extends Component {
                 </div>
                 </div>
                 <br />  <br />  
-                <div>
+                <div id="container-fluid justify-content-center " style={{"paddingLeft":"2rem"}}>
                     <label> Set tooltip position:
                         <select value={tooltipPosition} onChange={this.handleChange}>
                         <option value="">--Select any of the choise from below--</option>   
@@ -100,10 +112,11 @@ class Home extends Component {
                         <option value="bottom">Bottom</option>
                         <option value="left">Left</option>
                         </select>
-                    </label>
-                    <div id="main" >
-                        {(showTooltip && <TooltipMe props ={tooltipPosition} />)}
-                        {(box === 'text' )}
+                    </label> <span>Hover Below to check</span>
+                    <div id="main" onMouseEnter={this.onHover} onMouseLeave={this.onLeave} style={{"height":"5rem","width":"44rem","border":"2px solid black"}}>
+                        {(showTooltip &&  
+                             <TooltipMe props ={tooltipPosition} />)}
+                        {(box === 'text')} 
                     </div>
                 </div>
         </Content>
