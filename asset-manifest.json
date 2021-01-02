@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-tooltip/static/css/main.afd7172b.chunk.css",
-    "main.js": "/react-tooltip/static/js/main.952d54cf.chunk.js",
-    "main.js.map": "/react-tooltip/static/js/main.952d54cf.chunk.js.map",
+    "main.js": "/react-tooltip/static/js/main.f6c0f68c.chunk.js",
+    "main.js.map": "/react-tooltip/static/js/main.f6c0f68c.chunk.js.map",
     "runtime-main.js": "/react-tooltip/static/js/runtime-main.3a669c99.js",
     "runtime-main.js.map": "/react-tooltip/static/js/runtime-main.3a669c99.js.map",
     "static/css/2.15967cb4.chunk.css": "/react-tooltip/static/css/2.15967cb4.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.15967cb4.chunk.css",
     "static/js/2.0ad6a429.chunk.js",
     "static/css/main.afd7172b.chunk.css",
-    "static/js/main.952d54cf.chunk.js"
+    "static/js/main.f6c0f68c.chunk.js"
   ]
 }
