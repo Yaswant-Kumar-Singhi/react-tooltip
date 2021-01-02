@@ -52,7 +52,7 @@ class Home extends Component {
         
         <Content style ={{
             "padding" :"25px 50px",
-            "min-height" : "593px"
+            "min-height" : "550px"
         }}>
             <div className="container-fluid d-flex justify-content-center">   
                 <div className="row">
