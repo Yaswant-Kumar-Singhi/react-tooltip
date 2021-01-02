@@ -2,7 +2,7 @@
   "name": "react-tooltip",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yaswant-kumar-singhi.github.io/react-tooltip/",
+  "homepage": "https://yaswant-kumar-singhi.github.io/react-tooltip",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.2",
