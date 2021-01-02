@@ -1,23 +1,35 @@
-import React from 'react'
+import React, { Component } from 'react'
 import {Tooltip} from 'react-tippy'
 import {Link} from 'react-router-dom'
 import 'react-tippy/dist/tippy.css'
 import 'antd/dist/antd.css'
+import TooltipMe from '../components/TooltipAssgn'
 //import {} from '@tip'
 import {Layout , Menu , Breadcrumb, Card, Button, Dropdown} from 'antd'
 const {Header , Content , Footer  }  = Layout 
 
 
+class Home extends Component {
 
-const Home = () => {
+    constructor (){
+        super();
+        this.state = {
+        box: 'text',
+        showTooltip: true,
+        tooltipPosition: '',
+         }
+    }
 
-    
-    
-    
-   
-    
-    return(
-        <Layout>
+    handleChange = (event) => {
+        this.setState({
+          tooltipPosition: event.target.value
+        })
+      }
+      render() {
+        const { box, showTooltip, tooltipPosition} = this.state;
+
+        return(
+            <Layout>
             <Header>
                 <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['home']}> 
                     <Menu.Item key="home"  >
@@ -77,12 +89,23 @@ const Home = () => {
                         </Card>
                     </div>
                 </div>
-            </div>
-            
-            
-
-           
-    
+                </div>
+                <br />  <br />  
+                <div>
+                    <label> Set tooltip position:
+                        <select value={tooltipPosition} onChange={this.handleChange}>
+                        <option value="">--Select any of the choise from below--</option>   
+                        <option value="top">Top</option>
+                        <option value="right">Right</option>
+                        <option value="bottom">Bottom</option>
+                        <option value="left">Left</option>
+                        </select>
+                    </label>
+                    <div id="main" >
+                        {(showTooltip && <TooltipMe props ={tooltipPosition} />)}
+                        {(box === 'text' )}
+                    </div>
+                </div>
         </Content>
 
         
@@ -94,9 +117,9 @@ const Home = () => {
 
 </Layout>
           
-    )
-
+        )
+      }
+    
 }
-
 
 export default Home ;
